@@ -5,6 +5,7 @@
 body {
   background-color: #131720;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
 }
 
 .topnav {
@@ -63,6 +64,10 @@ input {
   margin: 3px;
 }
 
+#title a {
+  color: grey;
+}
+
 .column {
   float: left;
   /* width: 25%; */
@@ -70,13 +75,21 @@ input {
 }
 
 .card {
-  height: 380px;
+  height: 400px;
   width: 220px;
   border-radius: 15px;
   padding: 8px;
   text-align: center;
   background-color: #151f30;
-  line-height: 72px;
+  line-height: 92px;
+}
+
+.reviewCard {
+  width: 220px;
+  border-radius: 15px;
+  padding: 8px;
+  text-align: left;
+  background-color: #151f30;
 }
 
 #section {

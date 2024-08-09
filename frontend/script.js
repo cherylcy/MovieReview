@@ -8,7 +8,7 @@ const main = document.getElementById("section");
 const form = document.getElementById("form");
 const search = document.getElementById("query");
 
-function retrunMovies(url) {
+function returnMovies(url) {
   fetch(url)
     .then((res) => res.json())
     .then(function (data) {
@@ -33,7 +33,8 @@ function retrunMovies(url) {
           titleText = titleText.slice(0, 40) + "...";
           title.setAttribute("title", element.title);
         }
-        title.innerHTML = `${titleText}`;
+        title.innerHTML = `${titleText}
+        <br><a href="movie.html?id=${element.id}&title=${element.title}">reviews</a>`;
         image.src = IMG_PATH + element.poster_path;
 
         // center.appendChild(image);
@@ -56,7 +57,9 @@ form.addEventListener("submit", (e) => {
   const searchItem = search.value;
 
   if (searchItem) {
-    retrunMovies(SEARCHAPI + searchItem);
+    returnMovies(SEARCHAPI + searchItem);
     search.value = "";
   }
 });
+
+returnMovies(APILINK);
