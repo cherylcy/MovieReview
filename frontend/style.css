@@ -38,7 +38,7 @@ form {
   align-items: center;
 }
 
-input {
+.search-container input {
   all: unset;
   font: 15px system-ui;
   color: #fff;
@@ -84,12 +84,26 @@ input {
   line-height: 92px;
 }
 
+#reviewTitle {
+  margin-left: 20px;
+}
+
 .reviewCard {
   width: 220px;
   border-radius: 15px;
   padding: 8px;
   text-align: left;
   background-color: #151f30;
+}
+
+.reviewCard p {
+  margin: 6px 6px;
+}
+
+.reviewCard input {
+  height: 20px;
+  width: 100%;
+  padding: 6px 9px;
 }
 
 #section {
