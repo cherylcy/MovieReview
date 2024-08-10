@@ -4,7 +4,7 @@ const movieTitle = url.searchParams.get("title");
 
 const APILINK = "http://localhost:8000/api/v1/reviews/";
 
-const main = document.getElementById("section");
+const main = document.getElementById("reviewSection");
 const title = document.getElementById("reviewTitle");
 
 title.innerText = "Reviews for: " + movieTitle;

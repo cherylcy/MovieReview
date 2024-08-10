@@ -94,6 +94,7 @@ form {
   padding: 8px;
   text-align: left;
   background-color: #151f30;
+  break-inside: avoid-column;
 }
 
 .reviewCard p {
@@ -109,4 +110,10 @@ form {
 #section {
   display: flex;
   flex-wrap: wrap;
+}
+
+#reviewSection {
+  column-width: 230px;
+  column-count: auto;
+  column-gap: 8px;
 }
