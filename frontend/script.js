@@ -1,7 +1,5 @@
-const api_key = process.env["TMDB_API_KEY"];
-const APILINK = `https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=${api_key}&page=1`;
+const APILINK = "http://localhost:8000/api/v1/movies/";
 const IMG_PATH = "https://image.tmdb.org/t/p/w1280";
-const SEARCHAPI = `https://api.themoviedb.org/3/search/movie?&api_key=${api_key}&query=`;
 
 const main = document.getElementById("section");
 const form = document.getElementById("form");
@@ -56,7 +54,7 @@ form.addEventListener("submit", (e) => {
   const searchItem = search.value;
 
   if (searchItem) {
-    returnMovies(SEARCHAPI + searchItem);
+    returnMovies(APILINK + "?query=" + searchItem);
     search.value = "";
   }
 });
